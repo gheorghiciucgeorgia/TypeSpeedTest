@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Speed Test</title>
+    <link rel="icon" type="image/svg+xml" href="/test.png" />
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-[#B2CD9C] to-[#F0F2BD] min-h-screen">
+    <div
+        class="container border-[#4B352A] border-[2px] border-solid w-[80vmin] px-[30px] py-[20px] bg-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[25px] box-shadow-[0px,20px,40px, rgba(0,0,0,0.15)]">
+        <div class="stats flex justify-around text-[18px] mb-[30px]">
+            <p>Time: <span id="timer" class="font-[600]">0</span></p>
+            <p>Mistakes: <span id="mistakes" class="font-[600]">0</span></p>
+        </div>
+        <div id="quote" class="text-justify mt-[50px] mr-0 mb-[30px] ml-0" onmousedown="return false"
+            onselectstart="return false"></div>
+        <textarea id="quote-input" class="resize-none w-full rounded-[5px] px-[5px] py-[10px] text-[16px]" rows="3"
+            placeholder="Type here when test starts..."></textarea>
+
+        <button id="start-test"
+            class="float-right mt-[20px] bg-[#4B352A] text-white border-none py-[10px] px-[30px] rounded-[5px] text-[18px]"
+            onclick="startTest()">Start Test</button>
+        <button id="stop-test"
+            class="float-right mt-[20px] bg-[#4B352A] text-white border-none py-[10px] px-[30px] rounded-[5px] text-[18px]"
+            onclick="displayResult()">Stop Test</button>
+
+        <div class="result">
+            <h3 class="text-center mb-[20px] text-[22px]">Results</h3>
+            <div class="wrapper flex justify-around">
+                <p>Accuracy: <span id="accuracy" class="font-[600]"></span></p>
+                <p>Speed: <span id="wpm" class="font-[600]"></span></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
